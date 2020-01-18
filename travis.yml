@@ -4,3 +4,10 @@ python:
   # command to run tests
 script:
   - python -m unittest myapp_test
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
